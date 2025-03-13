@@ -1,0 +1,21 @@
+
+.mvh-100{
+    min-height: calc(100vh - 56px);
+}
+
+.title{
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+label{
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-control{
+    border: 0;
+    background-color: #efefef;
+}

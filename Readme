@@ -1,0 +1,102 @@
+# Task Management System
+
+## Overview
+A full-stack task management system using React for the frontend and Node.js with Express for the backend. The application supports user authentication, task management, document attachment, filtering, and sorting.
+
+## Features
+- User authentication (JWT-based login and registration)
+- CRUD operations for users and tasks
+- Task assignment to different users
+- Attach up to 3 documents (PDF) to tasks
+- Filter and sort tasks by status, priority, and due date
+- MongoDB database support
+- File storage in local
+- API documentation (Postman collection)
+- Automated tests
+- Dockerized application
+
+## Tech Stack
+- **Frontend:** React, React Router, Axios
+- **Backend:** Node.js, Express, JWT, Multer (for file uploads)
+- **Database:** MongoDB
+- **Storage:** Local file storage / AWS S3
+- **Testing:** Jest, Supertest
+- **Containerization:** Docker, Docker Compose
+
+## Installation & Setup
+
+### Prerequisites
+- Node.js & npm
+- MongoDB
+- Docker (optional for containerization)
+
+### Backend Setup
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/sneha-tiwari06/Task-Management-System
+   cd task-manager/Backend
+   ```
+
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+
+3. Create a `.env` file and add the following:
+   ```env
+MONGO_URI=mongodb://localhost:27017/task-management
+PORT=5000
+JWT_SECRET=a3f1b5c8d9e2a7b8f4c3e5d6a9c1b0f8d7e6c5a4b2e3d9f1a0b1c2d3e4f5a6b7
+
+4. Run migrations (if using PostgreSQL):
+   ```sh
+   npx sequelize-cli db:migrate
+   ```
+
+5. Start the backend server:
+   ```sh
+   node/nodemon server.js
+   ```
+
+### Frontend Setup
+
+1. Navigate to the frontend folder:
+   ```sh
+   cd ../frontend
+   ```
+
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+
+3. Start the React development server:
+   ```sh
+   npm start
+   ```
+
+### Running with Docker
+
+1. Build and start containers:
+   ```sh
+   docker-compose up --build
+   ```
+
+## API Routes
+- **Auth:** `/api/auth` (Register, Login, Logout)
+- **Users:** `/api/users` (CRUD operations)
+- **Tasks:** `/api/tasks` (CRUD, assignment, file upload, filtering, sorting)
+
+## Testing
+Run automated tests with:
+```sh
+npm test
+```
+
+## API Documentation
+The API is documented using Postman. Run the server and visit:
+- Postman Collection: [Postman Link](#)
+
+
+
